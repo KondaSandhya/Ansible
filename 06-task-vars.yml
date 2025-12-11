@@ -1,0 +1,16 @@
+- name: Task level vars
+  hosts: local
+  connection: local
+  vars:
+    NAME: 'Devops'
+    TIME: '40HRS'
+    DAYS: 'ONE MONTH'
+  tasks:
+    - name: print vars
+      vars:
+        NAME: 'ANSIBLE_TASK'
+      ansible.builtin.debug:
+        msg: 'Hello {{ NAME }}, Complete your {{ TIME }} training in {{ DAYS }} day.'
+    - name: print vars again
+      ansible.builtin.debug:
+        msg: 'Hello {{ NAME }}, Complete your {{ TIME }} training in {{ DAYS }} day.'
