@@ -1,0 +1,14 @@
+- name: playbook level vars
+  hosts: local
+  connection: local
+  vars:
+    NAME: 'ANSIBLE'
+    TIME: '10HRS'
+    DAYS: 'THREE'
+  tasks:
+    - name: print vars
+      ansible.builtin.debug:
+        msg: 'Hello {{ NAME  }}, Complete your {{  TIME }} training in {{ DAYS }} days.'
+    - name: print vars again
+      ansible.builtin.debug:
+        msg: 'Hello {{ NAME  }}, Complete your {{  TIME }} training in {{ DAYS }} days.'
