@@ -1,0 +1,21 @@
+- name: multi playbook-1
+  host: local
+  connection: local
+  tasks:
+    - name: task1
+      ansible.builtin.debug:
+        mg: 'Task1 from play 1'
+    - name: task2
+      ansible.builtin.debug:
+        mg: 'Task2 from play 1'
+
+- name: multi playbook-2
+  host: local
+  connection: local
+  tasks:
+    - name: task1
+      ansible.builtin.debug:
+        mg: 'Task1 from play 2'
+    - name: task2
+      ansible.builtin.debug:
+        mg: 'Task2 from play 2'
