@@ -1,6 +1,7 @@
 ---
 - name: Sample Playbook
   hosts: frontend
+  become: yes
   tasks:
     - name: message
       ansible.builtin.debug:
