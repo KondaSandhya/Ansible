@@ -12,7 +12,7 @@
     DETAILS:
       city: 'Seattle'
       country: 'USA'
-    tasks:
-      - name: Printing different variables
-        ansible.builtin.debug:
-          msg: 'Hi {{ NAME }}, You have {{ TIME }} hours. Status is: {{ IS_ACTIVE  }}. Skills are: {{  SKILLS }} and finally the Address is {{ DETAILS.city }}, {{ DETAILS.country }}.'
+  tasks:
+    - name: Printing different variables
+      ansible.builtin.debug:
+        msg: 'Hi {{ NAME }}, You have {{ TIME }} hours. Status is: {{ IS_ACTIVE  }}. Skills are: {{  SKILLS }} and finally the Address is {{ DETAILS.city }}, {{ DETAILS.country }}.'
