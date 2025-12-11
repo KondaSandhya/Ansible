@@ -1,5 +1,5 @@
 - name: multi playbook1
-  host: local
+  hosts: local
   connection: local
   tasks:
     - name: task1
@@ -10,7 +10,7 @@
         mg: 'Task2 from play 1'
 
 - name: multi playbook2
-  host: local
+  hosts: local
   connection: local
   tasks:
     - name: task1
