@@ -1,8 +1,9 @@
+---
 - name: Sample Playbook
   hosts: frontend
   tasks:
     - name: message
-      ansible.buitin.debug:
+      ansible.builtin.debug:
         msg: 'Hello we are installing nginx'
     - name: Install nginx
       ansible.builtin.package:
