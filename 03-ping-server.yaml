@@ -1,0 +1,5 @@
+- name: Ping the Server to check connectivity
+  hosts: frontend
+  tasks:
+    - name: ping the Server
+      ansible.builtin.ping:
