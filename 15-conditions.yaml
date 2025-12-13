@@ -1,0 +1,16 @@
+- name: Install nginx and start
+  hosts: frontend
+  become: yes
+  tasks:
+    - name: Install nginx
+      ansible.builtin.package:
+        - name: nginx
+        - state: present
+        - enable: yes
+      when: ansible_os_family == "RedHat"
+    - name: Install nginx
+      ansible.builtin.package:
+        - name: nginx
+        - state: present
+        - enable: yes
+      when: ansible_os_family == "Debian"
