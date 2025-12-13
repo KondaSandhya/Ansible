@@ -11,4 +11,4 @@
     - name: Check is number is greater than 10
       ansible.builtin.debug:
         msg: 'Number is greater than 10'
-      when: NUMBER > 10
+      when: NUMBER > 500
