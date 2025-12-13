@@ -21,4 +21,4 @@
           time: 30
           days: two
       ansible.builtin.debug:
-        msg: '{{ course | dict2item }}'
+        msg: '{{ course | dict2items }}'
