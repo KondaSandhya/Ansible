@@ -31,3 +31,15 @@
           - { 'key': 'days', 'value': 'two' }
       ansible.builtin.debug:
         msg: '{{ course | items2dict }}'
+
+    - name: convert to uppercase
+      vars:
+        name: 'sandhyA'
+      ansible.builtin.debug:
+        msg: 'Hello, {{ name | upper }}'
+
+    - name: convert to lowercase
+      vars:
+        name: 'sanDhyA'
+      ansible.builtin.debug:
+        msg: 'Hello, {{ name | lower }}'
