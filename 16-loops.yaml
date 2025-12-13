@@ -1,6 +1,6 @@
-- name: Loops
+- name: Looping through items
   hosts: local
-  connections: local
+  connection: local
   tasks:
     - name: Looping throug the list
       ansible.builtin.debug:
