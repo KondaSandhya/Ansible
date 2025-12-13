@@ -14,3 +14,11 @@
     - name: convert string to list
       ansible.builtin.debug:
         msg: '{{ persons | split(",") }}'
+    - name: convert map to list
+      vars:
+        course:
+          name: ansible
+          time: 30
+          days: two
+      ansible.builtin.debug:
+        msg: '{{ course | dict2item }}'
