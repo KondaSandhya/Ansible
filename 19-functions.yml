@@ -13,4 +13,4 @@
         msg: 'Hello, {{ persons }}'
     - name: convert string to list
       ansible.builtin.debug:
-        msg: '{{ persons | split(,) }}'
+        msg: '{{ persons | split(",") }}'
