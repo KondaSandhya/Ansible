@@ -1,0 +1,14 @@
+- name: Looping through item to install
+  hosts: frontend
+  become: yes
+  tasks:
+    - name: install
+      ansible.builtin.package:
+        name: '{{ item }}'
+        state: present
+      ansible.builtin.debug:
+        msg: '{{ item }} is installed'
+      loop:
+        - nginx
+        - httpd
+        - mysql
