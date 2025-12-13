@@ -6,8 +6,8 @@
       ansible.builtin.dnf:
         name: '{{ item }}'
         state: present
-      # ansible.builtin.debug:
-      #   msg: '{{ item }} is installed'
+      ansible.builtin.debug:
+        msg: '{{ item }} is installed'
       loop:
         - nginx
         - httpd
