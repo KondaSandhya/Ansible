@@ -22,3 +22,12 @@
           days: two
       ansible.builtin.debug:
         msg: '{{ course | dict2items }}'
+
+    - name: convet list to dictionary
+      vars:
+        course:
+          - { 'key': 'name', 'value': 'ansible' }
+          - { 'key': 'time', 'value': '30' }
+          - { 'key': 'days', 'value': 'two' }
+      ansible.builtin.debug:
+        msg: '{{ course | items2dict }}'
