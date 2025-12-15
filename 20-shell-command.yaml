@@ -1,0 +1,19 @@
+- name: Shell vs Command
+  hosts: frontend
+  #connection: local
+  tasks:
+    - name: Shell Module
+      ansible.builtin.shell: ls -ltr > /tmp/output.txt
+      register: command_result
+
+    - name: Print command result
+      ansible.builtin.debug:
+        msg: '{{ command_result }}'
+
+    - name: Command Module
+      ansible.builtin.command: ls -ltr > /tmp/output.txt
+      register: command_output
+
+    - name: Print command output
+      ansible.builtin.debug:
+        msg: '{{ command_output }}'
